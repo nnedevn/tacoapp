@@ -5,3 +5,12 @@
 var expect = require('chai').expect;
 var request = require('supertest');
 var app = require('../index');
+
+//describe('what are we testing', fx())
+describe('GET /', function(){
+  it('should return a 200 resp', function(done){
+    request(app).get('/')
+      .expect(200, done);
+  });
+});
+
